@@ -13,12 +13,34 @@ export const Inner = styled.div `
         flex-direction: column;
     }
 `;
+export const Pane = styled.div`
+    width: 50%;
+
+    @media (max-width: 1000px) {
+        width: 100%;
+        padding: 0 45px;
+        text-align: center;
+    }
+`;
 
 export const Item = styled.div`
     display: flex;
+    border-bottom: 8px solid #222;
+    padding: 50px 5%;
+    color: white;
+    overflow: hidden;
 `;
 
-export const Container = styled.section``;
+export const Container = styled.section`
+    background-color: black;
+
+    @media (max-width: 1000px) {
+        ${Item}:last-of-type h2 {
+            margin-bottom: 50px;
+        }
+
+    }
+`;
 
 export const Title = styled.h1`
     font-size: 50px;
